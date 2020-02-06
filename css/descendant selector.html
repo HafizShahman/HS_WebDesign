@@ -1,0 +1,93 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+    <style>
+        #s1 p{
+            background-color: purple;
+            color: aqua;
+        }
+        #s2>p{
+            background-color: pink;
+            color: aqua;
+        }
+        #s3+p{
+            background-color: blue;
+            color: aqua;
+        }
+        #s4 a[target]{
+            background-color: yellow;
+        }
+        #s5 a[target=_blank]{
+            background-color: yellow;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <h2>Descendant Selector</h2>
+    <div id="s1">
+        <p>Paragraph 1 in the div.</p>
+        <p>paragraoh 2 in the div.</p>
+        <span><p>Paragraph 3 in the div.</p></span>
+    </div>
+    
+    <p>Paragraph 4 not in div.</p>
+    <p>Paragraph 5 not in the div.</p>
+    
+    <hr>
+    
+    <h2>Child Selector</h2>
+    <div id="s2">
+        <p>Paragraph 1 in the div.</p>
+        <p>paragraoh 2 in the div.</p>
+        <span><p>Paragraph 3 in the div.</p></span>
+    </div>
+    
+    <p>Paragraph 4 not in div.</p>
+    <p>Paragraph 5 not in the div.</p>
+    
+    <hr>
+    
+    <h2>Sibling Selector</h2>
+    <div id="s3">
+        <p>Paragraph 1 in the div.</p>
+        <p>paragraoh 2 in the div.</p>
+        <span><p>Paragraph 3 in the div.</p></span>
+    </div>
+    
+    <p>Paragraph 4 not in div.</p>
+    <p>Paragraph 5 not in the div.</p>
+    
+    <hr>
+    
+    <h2>Attribute Selector</h2>
+    <div id="s4">
+        
+    <p>The links with a target attribute gets a yellow background:</p>
+        
+        <a href="https://www.w3schools.com">w3schools.com</a>
+        <a href="http://www.disney.com" target="_blank">disney.com</a>
+        <a href="http://www.wikipedia.org"target="_top">wikipedia.org</a>
+
+    <p><b>Note:</b> For [<i>attribute</i>] to work in IE8 and earlier, a DOCTYPE must be declared.</p>
+    </div>
+    <hr>
+    <h2>Attribute Selector 2</h2>
+    <div id="s5">
+    <p>The links with a target attribute gets a yellow background:</p>
+
+        <a href="https://www.w3schools.com">w3schools.com</a><br>
+        <a href="http://www.disney.com" target="_blank">disney.com</a><br>
+        <a href="http://www.wikipedia.org"target="_top">wikipedia.org</a><br>
+
+    <p><b>Note:</b> For [<i>attribute</i>] to work in IE8 and earlier, a DOCTYPE must be declared.</p>
+        
+    </div>
+
+
+    
+</body>
+</html>
