@@ -1,0 +1,40 @@
+@charset "utf-8";
+/* CSS Document */
+body {
+    background-color: deepskyblue;
+    background-image: url("image/stadium.jpg");
+    background-repeat:no-repeat;
+    background-size: contain;
+    background-attachment: fixed;
+    background-position: center;
+    padding: 20px;
+}
+.main {
+    color: darkcyan;
+    text-shadow : 15px 20px 12px red;
+    text-transform : capitalize;
+    padding: 5px;
+    text-align: center;
+    font-size: 50px
+}
+#detail {
+    border: 2px outset;
+    padding: 10px 40px 10px 40px;
+    background-image: url("image/giphy.gif");
+    background-position: center;
+    opacity: 0.9;
+    width: 540px;
+    height: 500px;
+    margin-left: 29%
+}
+
+h4 {
+    color: brown;
+    font-size: 17px;
+}
+#detail p {
+    margin-left: 60px;
+    font-size: 20px;
+    color: darkblue;
+}
+
