@@ -22,8 +22,8 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author hafiz
  */
-@WebServlet("/LoginServlet")
-public class LoginServlet extends HttpServlet {
+@WebServlet("/loginServlet")
+public class loginServlet extends HttpServlet {
 
     private static final long serialVersionUID = 1L;
     String user_ID_from_DB = "";
@@ -44,8 +44,8 @@ public class LoginServlet extends HttpServlet {
         // Database operations using JDBC
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            String url = " jdbc:mysql://%localhost/Student";
-            Connection connection = DriverManager.getConnection(url, "shahman", "shahman");
+            String url = " jdbc:mysql://localhost/Student";
+            Connection connection = DriverManager.getConnection(url, "root", "");
             if (connection.equals(null)) {
                 System.out.println("connection was failed");
             } else {
@@ -56,8 +56,8 @@ public class LoginServlet extends HttpServlet {
                         + user_id + "'");
                 if (!result.equals(null)) {
                     while (result.next()) {
-                        user_ID_from_DB = result.getString("login_id").trim();
-                        user_password_from_DB = result.getString("password").trim();
+                        user_ID_from_DB = result.getString("user_id").trim();
+                        user_password_from_DB = result.getString("user_password").trim();
                         System.out.println(user_ID_from_DB + " " + user_password_from_DB);
                     }
                     // Database operations completed
@@ -100,10 +100,10 @@ public class LoginServlet extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet LoginServlet</title>");
+            out.println("<title>Servlet loginServlet</title>");
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet LoginServlet at " + request.getContextPath() + "</h1>");
+            out.println("<h1>Servlet loginServlet at " + request.getContextPath() + "</h1>");
             out.println("</body>");
             out.println("</html>");
         }

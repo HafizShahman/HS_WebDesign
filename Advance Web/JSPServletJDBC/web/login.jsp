@@ -13,7 +13,7 @@
         <title>Sample Jsp-Servlet Example</title>
     </head>
     <body>
-        <form action="LoginServlet" method="post">
+        <form action="loginServlet" method="post">
             <table>
                 <tr>
                     <td>User name :</td>
