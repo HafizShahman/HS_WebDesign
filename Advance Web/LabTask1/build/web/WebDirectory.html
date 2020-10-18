@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+
+-->
+<html>
+    <head>
+        <title>WEB Directory</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body {
+                background-color: navajowhite;
+            }
+            .btn {
+                background-color: brown;
+                border: none;
+                color: aliceblue;
+                padding: 5px 15px;
+                text-align:center;
+                display: inline-block;
+                font-size: 15px;
+                margin: 5px;
+                cursor: pointer;
+                border-radius: 12px;
+            }
+        </style>
+    </head>
+    <body style="padding: 10%">
+        <form method="get" action="RadioBtnServlet">
+            <input type="radio" name="SearchEngine" value="http://www.google.com">Google.com<br><br>
+            <input type="radio" name="SearchEngine" value="http://www.msn.com">MSN<br><br>
+            <input type="radio" name="SearchEngine" value="http://www.yahoo.com">Yahoo.com<br><br>
+            <input type="submit" name="SearchEngine" value="Submit" class="btn">
+        </form>
+    </body>
+</html>
