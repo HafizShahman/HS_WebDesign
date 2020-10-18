@@ -1,0 +1,96 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+</head>
+
+<body>
+<p>Click the button to display a time-based greeting:</p>
+<button onclick="myFunction()">Try it</button>
+<p id="demo"></p>
+<script>
+       function myFunction() {
+    var greeting;
+    var time = new Date().getHours();
+    if (time < 5) {
+        greeting = "Good morning";
+    } else if (time > 6 && time < 11) {
+        greeting = "Good day";
+    } else {
+        greeting = "Good evening";
+    }
+document.getElementById("demo").innerHTML = greeting;
+}
+
+    </script>
+<hr>
+<br>
+<p id="demo2"></p>
+<script>
+var day;
+switch (new Date().getDay()) {
+    case 0:
+        day = "Sunday";
+        break;
+    case 1:
+        day = "Monday";
+        break;
+    case 2:
+        day = "Tuesday";
+        break;
+    case 3:
+        day = "Wednesday";
+        break;
+    case 4:
+        day = "Thursday";
+        break;
+    case 5:
+        day = "Friday";
+        break;
+    case 6:
+        day = "Saturday";
+}
+document.getElementById("demo2").innerHTML = "Today is " + day;
+</script>
+<hr>
+<br>
+<p id="demo3"></p>
+<script>
+var firstName = "John";
+
+if (firstName === "John") {
+    document.getElementById("demo3").innerHTML = "Hello John!";
+}
+</script>
+<hr>
+<br>
+<input id="myInput" type="text" value="Fruit">
+<button onclick="checkFruit()">Check Fruit</button>
+<p id="demo4"></p>
+<script>
+function checkFruit() {
+  var text;
+  var fruits = document.getElementById("myInput").value;
+
+  switch(fruits) {
+    case "Banana":
+      text = "Banana is good!";
+      break;
+    case "Orange":
+          text = "I am not a fan of orange.";
+          break;
+    case "Apple":
+          text = "How you like that apples?";
+          break;
+
+    // add case here
+
+    default:
+      text = "I have never heard of that fruit.";
+  }
+  document.getElementById("demo4").innerHTML = text;
+}
+</script>
+</body>
+</html>
