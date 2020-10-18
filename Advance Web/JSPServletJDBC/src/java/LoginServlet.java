@@ -22,7 +22,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author hafiz
  */
-@WebServlet("/loginServlet")
+@WebServlet("/LoginServlet")
 public class LoginServlet extends HttpServlet {
 
     private static final long serialVersionUID = 1L;
