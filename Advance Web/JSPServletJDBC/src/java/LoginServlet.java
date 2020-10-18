@@ -44,8 +44,8 @@ public class LoginServlet extends HttpServlet {
         // Database operations using JDBC
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            String url = " jdbc:mysql://localhost/Student";
-            Connection connection = DriverManager.getConnection(url, "root", " ");
+            String url = " jdbc:mysql://%localhost/Student";
+            Connection connection = DriverManager.getConnection(url, "shahman", "shahman");
             if (connection.equals(null)) {
                 System.out.println("connection was failed");
             } else {
