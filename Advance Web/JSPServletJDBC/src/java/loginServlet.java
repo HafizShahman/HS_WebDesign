@@ -1,11 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
@@ -19,24 +12,20 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- *
- * @author hafiz
+
  */
 @WebServlet("/loginServlet")
 public class loginServlet extends HttpServlet {
-
     private static final long serialVersionUID = 1L;
     String user_ID_from_DB = "";
     String user_password_from_DB = "";
-    Connection connection = null;
-    Statement querySmt = null;
-    ResultSet result = null;
-
+    Connection connection ;
+    Statement querySmt ;
+    ResultSet result;
     protected void doGet(HttpServletRequest request,
             HttpServletResponse response) throws ServletException, IOException {
         // TODO Auto-generated method stub
     }
-
     protected void doPost(HttpServletRequest request,
             HttpServletResponse response) throws ServletException, IOException {
         String user_id = request.getParameter("id").trim();
@@ -45,44 +34,35 @@ public class loginServlet extends HttpServlet {
         try {
             Class.forName("com.mysql.jdbc.Driver");
             String url = " jdbc:mysql://localhost/Student";
-            Connection connection = DriverManager.getConnection(url, "root", "");
+            Connection connection = DriverManager.getConnection(url, "root", " ");
             if (connection.equals(null)) {
                 System.out.println("connection was failed");
             } else {
                 System.out.println("connected successfully");
                 // Select user from database to check user login id and password
                 querySmt = connection.createStatement();
-                result = querySmt.executeQuery("select * from Authentication where login_id = '"
-                        + user_id + "'");
+                result = querySmt.executeQuery("select * from authentication where login_id = '" +
+                             user_id + "'");
                 if (!result.equals(null)) {
                     while (result.next()) {
                         user_ID_from_DB = result.getString("login_id").trim();
                         user_password_from_DB = result.getString("password").trim();
                         System.out.println(user_ID_from_DB + " " + user_password_from_DB);
                     }
-                    // Database operations completed
-                    if (user_id.equals(user_ID_from_DB) && password.equals(user_password_from_DB)) {
+                // Database operations completed
+                if (user_id.equals(user_ID_from_DB) && password.equals(user_password_from_DB)) {
                         request.getRequestDispatcher("/success.jsp").forward(request, response);
                     } else {
-                        request.getRequestDispatcher("/failure.jsp").forward(request, response);
+                        request.getRequestDispatcher("/fail.jsp").forward(request, response);
                     }
                 } else {
-                    request.getRequestDispatcher("/failure.jsp").forward(request, response);
+                    request.getRequestDispatcher("/fail.jsp").forward(request, response);
                 }
             }
         } catch (Exception exception) {
             exception.printStackTrace();
         } finally {
-            try {
-                result.close ();
-                querySmt.close();
-            } catch (SQLException e) {
-                // TODO Auto-generated catch block
-                e.printStackTrace();
-            }
+            
         }
     }
-
-    
-
 }
