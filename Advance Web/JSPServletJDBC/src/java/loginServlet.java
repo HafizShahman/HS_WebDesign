@@ -33,7 +33,7 @@ public class loginServlet extends HttpServlet {
         // Database operations using JDBC
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            String url = " jdbc:mysql://localhost/Student";
+            String url = "jdbc:mysql://localhost:3306/Student";
             Connection connection = DriverManager.getConnection(url, "root", " ");
             if (connection.equals(null)) {
                 System.out.println("connection was failed");

@@ -20,7 +20,7 @@ import java.io.*;
  */
 public class LoginServlet extends HttpServlet {
 
-    public void doGet(HttpServletRequest req, HttpServletResponse res)
+   /* public void doGet(HttpServletRequest req, HttpServletResponse res)
             throws ServletException, IOException {
         res.setContentType("text/html");
         String username = req.getParameter("username");
@@ -28,7 +28,7 @@ public class LoginServlet extends HttpServlet {
         PrintWriter writer = res.getWriter();
         String message = "Username is : " + username + "<br/>Password is : " + password;
         writer.println(message);
-    }
+    }*/
 
     public void doPost(HttpServletRequest req, HttpServletResponse res)
             throws ServletException, IOException {
