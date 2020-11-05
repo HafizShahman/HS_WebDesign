@@ -32,7 +32,7 @@
     <body>
         <div align="center">
             <h1>Student Register Form</h1>
-            <form action="registerServlet" method="post">
+            <form action="../registerServlet" method="post">
                 <table style="with: 50%">
                     <tr>
                         <td>Student ID</td>

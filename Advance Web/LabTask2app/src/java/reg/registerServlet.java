@@ -1,4 +1,4 @@
-/*
+package reg;/*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
@@ -50,7 +50,7 @@ public class registerServlet extends HttpServlet {
 
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            String url = " jdbc:mysql://localhost/Student";
+            String url = " jdbc:mysql://localhost:3306/student";
             Connection connection = DriverManager.getConnection(url, "root", " ");
 
             if (connection.equals(null)) {
@@ -61,7 +61,7 @@ public class registerServlet extends HttpServlet {
                 querySmt = connection.createStatement();
                 String INSERT_USERS_SQL = "INSERT INTO `studentlist`"
                         + "  (`StudentID`, `FirstName`, `LastName`, `Username`, `Password`, `Address`, `Contact`) VALUES "
-                        + " (?, ?, ?, ?, ?, ?, ?);";
+                        + " ('?', '?', '?', '?', '?', '?', '?');";
 
                 int result = 0;
 

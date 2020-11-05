@@ -2,11 +2,11 @@
 <web-app version="3.0" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
     <servlet>
         <servlet-name>registerServlet</servlet-name>
-        <servlet-class>registerServlet.registerServlet</servlet-class>
+        <servlet-class>reg.registerServlet</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>loginServlet</servlet-name>
-        <servlet-class>loginServlet.loginServlet</servlet-class>
+        <servlet-class>loginServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>registerServlet</servlet-name>
@@ -22,6 +22,6 @@
         </session-timeout>
     </session-config>
     <welcome-file-list>
-        <welcome-file>studentLogin.jsp</welcome-file>
+        <welcome-file>StudentRegister.jsp</welcome-file>
     </welcome-file-list>
 </web-app>

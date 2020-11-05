@@ -12,7 +12,7 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h1>Guru Register Form</h1>
+        <h1>Student Register Form</h1>
         <form action="registerServlet" method="post">
             <table style="with: 50%">
                 <tr>

@@ -71,19 +71,18 @@ public class registerServlet extends HttpServlet {
                 int result = 0;
 
                 PreparedStatement preparedStatement = connection.prepareStatement(INSERT_USERS_SQL);
-                preparedStatement.setInt(1, 1);
-                preparedStatement.setString(2, studentID);
-                preparedStatement.setString(3, firstName);
-                preparedStatement.setString(4, lastName);
-                preparedStatement.setString(5, username);
-                preparedStatement.setString(6, password);
-                preparedStatement.setString(7, address);
-                preparedStatement.setString(8, contact);
+                preparedStatement.setString(1, studentID);
+                preparedStatement.setString(2, firstName);
+                preparedStatement.setString(3, lastName);
+                preparedStatement.setString(4, username);
+                preparedStatement.setString(5, password);
+                preparedStatement.setString(6, address);
+                preparedStatement.setString(7, contact);
 
                 System.out.println(preparedStatement);
                 // Step 3: Execute the query or update query
                 result = preparedStatement.executeUpdate();
-                request.getRequestDispatcher("completeRegister.jsp").forward(request, response);
+                request.getRequestDispatcher("regCom.jsp").forward(request, response);
 
             }
             
