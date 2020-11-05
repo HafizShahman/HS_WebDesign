@@ -1,0 +1,138 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Contact Us</title>
+<link href="tapopstyle.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+<!-- This is code for overlay-->
+<div id="bar">
+<div id="overlay" onclick="off()" style="float:left">
+  <div id="nav" align="center">
+	  <ul>
+		<li><a href="index.html">Home</a></li>
+		<li><a href="tech.html">Tech News</a></li>
+		<li style="color: #FFFFFF">Smartphone
+			<ul>
+				<li><a href="android.html">Android</a></li>
+				<li><a href="ios.html">IOS</a></li>
+			</ul>
+		</li>
+		<li><a href="contact us.html">Contact Us</a></li>
+	  </ul>
+        </div>
+</div>
+<div style="padding:10px">
+<div id="social" style="float:right" >
+<a href="https://twitter.com/HafTechLife?lang=en"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a>
+<a href="https://www.tumblr.com/"><i class="fa fa-tumblr fa-2x" aria-hidden="true"></i></a>
+<a href="https://www.instagram.com/?hl=en"><i class="fa fa-instagram fa-2x" aria-hidden="true"></i></a>
+</div>
+
+  <i class="fa fa-bars fa-2x" aria-hidden="true" onclick="on()"></i>
+</div>
+
+
+
+</div>
+<script>
+function on() {
+    document.getElementById("overlay").style.display = "block";
+}
+
+function off() {
+    document.getElementById("overlay").style.display = "none";
+}
+</script>
+<!-- End of overlay code-->
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+<marquee direction="right">Welcome to HafTechLlife Tech & Everything</marquee><br>
+
+	
+<div id="aside">
+<img src="http://hitwebcounter.com/counter/counter.php?page=6887764&style=0009&nbdigits=5&type=page&initCount=10000" alt="counter">
+<img src="http://feedjit.com/b/e73864abf33cd4241ba1b1d2c8a4071c.png" alt="traffic" width="191" height="579" ISMAP border="0"/>
+	</div>
+	
+
+<div id="content" style="margin:10px">
+<!--PUT CONTENT IN HERE-->
+<div align="center">
+	
+<h1 style="color: #00FFFF">GET IN TOUCH</h1>
+<p>If you have any suggestion and opinion, you contact us by filling this section.<br>
+We will reply your message as soon as posible.</p>
+</div>
+
+<div id="form" align="center">
+<form action="mailto:hafizshahman1@gmail.com" method="post" enctype="text/plain">
+First name:<br><input type="text" name="firstname"><br>
+E-Mail:<br><input type="email" name="E-Mail"><br>
+Phone:<br><input type="text" name="Phone"><br>
+Subject:<br><input type="text" name="Subject"><br>
+Message:<br><textarea name="message" style="width:400px; height:50px">
+</textarea><br>
+
+<input type="submit" name="Submit" value="Submit">
+<input type="reset" name="Reset" value="Reset">
+</form>
+	<br>
+<br>
+<h3>E-mail</h3>
+<p><a href="hafizshahman1@gmail.com">hafizshahman1@gmail.com</a></p>
+<h3>Phone</h3>
+<p style="text-decoration: underline">+60 17-928 3236<br>
++60 10-356 4414</p><br>
+<br>
+
+
+	<!--slider-->
+<div style="align-content: center">
+<div class="slider" style="max-width:1000px">
+<img class="mySlides" src="images/s1.jpg" style="width:100%" alt="1">
+<img class="mySlides" src="images/s2.jpg" style="width:100%" alt="2">
+<img class="mySlides" src="images/s3.jpg" style="width:100%" alt="3">
+<img class="mySlides" src="images/s4.jpg" style="width:100%" alt="4">
+<img class="mySlides" src="images/s5.jpg" style="width:100%" alt="5"> 
+</div>
+
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "flex";  
+    setTimeout(carousel, 4000); // Change image every 4 seconds
+}
+</script>
+</div>
+<!--end slider-->
+<!--END OF CONTENT-->
+</div><br>
+<br>
+<br>
+<br>
+
+<div id="footer" align="center">
+COPYRIGHT © BY HAFIZ SHAHMAN | 2018 | hafizshahman1@gmail.com
+</div>
+</div>
+</body>
+
+</html>
