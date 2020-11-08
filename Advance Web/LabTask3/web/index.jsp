@@ -10,9 +10,27 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Succeed</title>
+        <style>
+            body {
+                background-color: navajowhite;
+                text-align: center;
+            }
+            .btn {
+                background-color: brown;
+                border: none;
+                color: aliceblue;
+                padding: 5px 15px;
+                text-align:center;
+                display: inline-block;
+                font-size: 15px;
+                margin: 5px;
+                cursor: pointer;
+                border-radius: 12px;
+            }
+        </style>
     </head>
     <body>
-        <%= "Welcome " + request.getParameter("j_username")%><br>
+        <h1>Welcome user</h1><br>
         <a href="logout.jsp">Click to Logout </a>
     </body>
 </html>
