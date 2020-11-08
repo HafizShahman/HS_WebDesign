@@ -1,6 +1,6 @@
 <%-- 
-    Document   : printdate
-    Created on : Oct 12, 2020, 12:02:22 PM
+    Document   : logout
+    Created on : Nov 7, 2020, 12:55:27 AM
     Author     : hafiz
 --%>
 
@@ -12,7 +12,9 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <% out.print("Today is:" + java.util.Calendar.getInstance().getTime());%>  
-        <%= request.getParameter("name")%>
+        <%
+            session.invalidate();
+            response.sendRedirect("index.jsp");
+        %> 
     </body>
 </html>

@@ -1,6 +1,6 @@
 <%-- 
-    Document   : printdate
-    Created on : Oct 12, 2020, 12:02:22 PM
+    Document   : error
+    Created on : Nov 7, 2020, 12:54:25 AM
     Author     : hafiz
 --%>
 
@@ -12,7 +12,7 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <% out.print("Today is:" + java.util.Calendar.getInstance().getTime());%>  
-        <%= request.getParameter("name")%>
+        <h3>Login Error</h3>   
+        <a href="index.jsp">Click to Login Again</a>     
     </body>
 </html>

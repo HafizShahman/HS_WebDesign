@@ -1,6 +1,6 @@
 <%-- 
-    Document   : printdate
-    Created on : Oct 12, 2020, 12:02:22 PM
+    Document   : index
+    Created on : Nov 7, 2020, 5:50:28 PM
     Author     : hafiz
 --%>
 
@@ -9,10 +9,10 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Succeed</title>
     </head>
     <body>
-        <% out.print("Today is:" + java.util.Calendar.getInstance().getTime());%>  
-        <%= request.getParameter("name")%>
+        <%= "Welcome " + request.getParameter("j_username")%><br>
+        <a href="logout.jsp">Click to Logout </a>
     </body>
 </html>
