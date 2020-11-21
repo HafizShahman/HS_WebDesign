@@ -12,7 +12,7 @@
 <%
     String id = request.getParameter("bookid");
     String driver = "com.mysql.jdbc.Driver";
-    String connectionUrl = "jdbc:mysql://localhost:3306/bookstore";
+    String connectionUrl = "jdbc:mysql://localhost:3306/";
     String database = "bookstore";
     String userid = "root";
     String password = "";
@@ -30,6 +30,12 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>JSP Page</title>
+        <style>
+            body {
+                background-color: navajowhite;
+                text-align: center;
+            }
+        </style>
     </head>
     <body>
         <h1>Book List</h1>
@@ -39,7 +45,6 @@
                 <td>Author</td>
                 <td>Book Genre</td>
                 <td>Year Of Publish</td>
-                <td>Description</td>
                 <td>Link</td>
             </tr>
             <%
@@ -55,7 +60,6 @@
                 <td><%=resultSet.getString("author") %></td>
                 <td><%=resultSet.getString("gerne") %></td>
                 <td><%=resultSet.getString("year") %></td>
-                <td><%=resultSet.getString("descript") %></td>
                 <td><%=resultSet.getString("link") %></td>
             </tr>
             <%
