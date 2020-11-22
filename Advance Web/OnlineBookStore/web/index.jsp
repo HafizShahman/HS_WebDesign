@@ -30,7 +30,12 @@
         </style>
     </head>
     <body>
-        <h1>Hello World!</h1>
+          <div class="main-content">
+            <center>
+                <h1> Hello, <% String Email = request.getParameter("Email"); %><% out.println(Email); %></h1>
+                <h2><a href="login.jsp">Logout</a></h2>
+            </center>
+        </div>
         <button class="btn"><a href="booklist.jsp">book list</a></button>
     </body>
 </html>

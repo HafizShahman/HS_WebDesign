@@ -10,12 +10,11 @@
 <%@page import="java.sql.Statement"%>
 <%@page import="java.sql.Connection"%>
 <%
-    String id = request.getParameter("bookid");
     String driver = "com.mysql.jdbc.Driver";
-    String connectionUrl = "jdbc:mysql://localhost:3306/";
-    String database = "bookstore";
+    String connectionUrl = "jdbc:mysql://localhost:3306/bookstore";
     String userid = "root";
     String password = "";
+    String id = request.getParameter("bookid");
     try {
         Class.forName(driver);
     } catch (ClassNotFoundException e) {
@@ -38,37 +37,32 @@
         </style>
     </head>
     <body>
+        <div class="container">
+            <form class="form-inline" method="post" action="search.jsp">
+                <input type="text" name="genre" class="form-control" placeholder="Search genre">
+                <button type="submit" name="save" class="btn btn-primary">Search</button>
+            </form>
+        </div>
         <h1>Book List</h1>
-        <table>
+        <table border="1" bordercolor="#000000" align="center">
             <tr>
-                <td>Book Title</td>
-                <td>Author</td>
-                <td>Book Genre</td>
-                <td>Year Of Publish</td>
-                <td>Link</td>
+                <td width="70">Book ID</td>
+                <td width="300">Book Title</td>
+                <td width="300">Author</td>
+                <td width="150">Book Genre</td>
+                <td width="70">Year Of Publish</td>
+                <td width="100">Link</td>
             </tr>
-            <%
-                try {
-                    connection = DriverManager.getConnection(connectionUrl + database, userid, password);
-                    statement = connection.createStatement();
-                    String sql = "select * from booklist";
-                    resultSet = statement.executeQuery(sql);
-                    while (resultSet.next()) {
-            %>
+            
             <tr>
-                <td><%=resultSet.getString("booktitle") %></td>
-                <td><%=resultSet.getString("author") %></td>
-                <td><%=resultSet.getString("gerne") %></td>
-                <td><%=resultSet.getString("year") %></td>
-                <td><%=resultSet.getString("link") %></td>
+                <td width="70"><%=resultSet.getString("bookid")%></td>
+                <td width="300"><%=resultSet.getString("booktitle")%></td>
+                <td width="300"><%=resultSet.getString("author")%></td>
+                <td width="150"><%=resultSet.getString("gerne")%></td>
+                <td width="70"><%=resultSet.getString("year")%></td>
+                <td width="100"><%=resultSet.getString("link")%></td>
             </tr>
-            <%
-                    }
-                    connection.close();
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
-            %>
+            
         </table>
     </body>
 </html>
