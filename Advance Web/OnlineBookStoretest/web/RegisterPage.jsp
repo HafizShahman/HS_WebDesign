@@ -9,7 +9,7 @@
 <%
     if (session.getAttribute("login") != null) //check login session user not access or back to register.jsp page
     {
-        response.sendRedirect("index.jsp");
+        response.sendRedirect("mainmenu.jsp");
     }
 %>
 <%
@@ -56,7 +56,7 @@
         <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="css/login-register.css">
 
-        <!-- javascript for registeration form validation-->
+        <!-- javascript for registration form validation-->
         <script>
 
             function validate()
